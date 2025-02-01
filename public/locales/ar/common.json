@@ -1,0 +1,249 @@
+{
+	"pages": {
+		"login": {
+			"title": "تسجيل الدخول إلى حسابك",
+			"subtitle": "قدم اسم المستخدم وكلمة المرور لتسجيل الدخول",
+			"signup": "إنشاء حساب",
+			"fields": {
+				"username": "اسم المستخدم",
+				"email": "البريد الإلكتروني",
+				"password": "كلمة المرور"
+			},
+			"errors": {
+				"validEmail": "عنوان البريد الإلكتروني غير صالح"
+			},
+			"buttons": {
+				"submit": "تسجيل الدخول"
+			}
+		},
+		"signup": {
+			"title": "إنشاء حساب جديد",
+			"subtitle": "مرحبًا بك في کلاد",
+			"signin": "تسجيل الدخول",
+			"buttons": {
+				"submit": "إنشاء حساب"
+			},
+			"fields": {
+				"username": "اسم المستخدم",
+				"email": "البريد الإلكتروني",
+				"password": "كلمة المرور"
+			}
+		},
+		"projects": {
+			"title": "المشاريع",
+			"search": "البحث في المشاريع",
+			"form": {
+				"project_name": {
+					"label": "اسم المشروع",
+					"placeholder": "مشروع رائع"
+				},
+				"project_type": {
+					"label": "نوع المشروع",
+					"placeholder": "مثل جولا"
+				},
+				"branch_name": {
+					"label": "اسم الفرع",
+					"placeholder": "مثل رئيسي"
+				},
+				"git_url": {
+					"label": "رابط Git",
+					"placeholder": "git://"
+				},
+				"dockerfile": {
+					"label": "ملف Docker",
+					"placeholder": "مثل Dockerfile"
+				},
+				"work_directory": {
+					"label": "دليل العمل",
+					"placeholder": ".yottab/"
+				},
+				"user": {
+					"label": "مستخدم Git",
+					"placeholder": "مستخدمي"
+				},
+				"secret": {
+					"label": "سر Git",
+					"placeholder": "ghp0nTHkAflf05xBJcVTzCx6aH8jAYaTQX_eNLSI"
+				}
+			}
+		},
+		"pipelines": {
+			"title": "الأنابيب",
+			"labels": {
+				"pipeline_detail": "تفاصيل الأنابيب",
+				"pipeline_jobs": "وظائف الأنابيب",
+				"stage": "المرحلة"
+			}
+		},
+		"applications": {
+			"title": "التطبيقات",
+			"new": "إنشاء تطبيق جديد"
+		},
+		"services": {
+			"title": "الخدمات"
+		},
+		"gateways": {
+			"title": "البوابات",
+			"form": {
+				"hostname": {
+					"label": "اسم المضيف",
+					"placeholder": "اكتب لإنشاء"
+				},
+				"matches": {
+					"button": "إضافة تطابق جديد",
+					"type": {
+						"label": "النوع"
+					},
+					"value": {
+						"label": "القيمة",
+						"placeholder": "مثل /test_filter"
+					}
+				},
+				"filters": {
+					"button": "إضافة فلتر جديد",
+					"type": {
+						"label": "النوع",
+						"RequestHeaderModifier": {
+							"label": "تعديل الطلب"
+						},
+						"ResponseHeaderModifier": {
+							"label": "تعديل الاستجابة"
+						}
+					},
+					"name": {
+						"label": "الاسم",
+						"placeholder": "مثل AppVersion"
+					},
+					"value": {
+						"label": "القيمة",
+						"placeholder": "مثل v0.0.1"
+					}
+				},
+				"backends": {
+					"button": "إضافة خلفية جديدة",
+					"name": {
+						"label": "الاسم"
+					},
+					"port": {
+						"label": "المنفذ",
+						"placeholder": "المنفذ"
+					},
+					"wight": {
+						"label": "الوزن",
+						"placeholder": "الوزن"
+					}
+				}
+			}
+		},
+		"configmap": {
+			"tab_label": "خرائط التكوين",
+			"title": {
+				"main": "خرائط التكوين",
+				"new": "إنشاء خريطة تكوين جديدة",
+				"list": "قائمة خرائط التكوين",
+				"edit": "تعديل خريطة التكوين {{configmap}}"
+			},
+			"button": {
+				"new": "خريطة تكوين جديدة"
+			},
+			"form": {
+				"key": {
+					"label": "المفتاح",
+					"placeholder": "مثل API_KEY"
+				},
+				"value": {
+					"label": "القيمة",
+					"placeholder": ""
+				}
+			}
+		},
+		"jobs": {},
+		"branch": {
+			"create_button": "إنشاء فرع جديد",
+			"new_title": "إنشاء فرع جديد",
+			"form": {
+				"name": {
+					"label": "اسم الفرع",
+					"placeholder": "مثل dev"
+				},
+				"is_development": {
+					"label": "تطوير",
+					"placeholder": ""
+				},
+				"disable": {
+					"label": "تعطيل",
+					"placeholder": ""
+				}
+			}
+		}
+	},
+	"labels": {
+		"created_by": "أنشأ بواسطة",
+		"created_at": "تم إنشاؤه في",
+		"duration": "المدة",
+		"status": "الحالة",
+		"branch": "الفرع",
+		"commit": "التزام",
+		"id": "المعرف"
+	},
+	"table": {
+		"no_results": "لا توجد نتائج.",
+		"filter": {
+			"placeholder": "اكتب لتصفية...",
+			"reset": "إعادة تعيين"
+		},
+		"sort": {
+			"asc": "تصاعدي",
+			"desc": "تنازلي"
+		},
+		"visibility": {
+			"hide": "إخفاء",
+			"show": "عرض",
+			"view": "عرض"
+		},
+		"pagination": {
+			"next": "التالي",
+			"previous": "السابق",
+			"per_page": "الصفوف في الصفحة",
+			"selection": "{{selected}} من {{total}} صف(وف) محددة"
+		}
+	},
+	"actions": {
+		"list": "قائمة",
+		"new": "إنشاء",
+		"edit": "تعديل",
+		"show": "عرض"
+	},
+	"buttons": {
+		"create": "إنشاء",
+		"save": "حفظ",
+		"logout": "تسجيل الخروج",
+		"delete": "حذف",
+		"edit": "تعديل",
+		"cancel": "إلغاء",
+		"confirm": "هل أنت متأكد؟",
+		"filter": "تصفية",
+		"clear": "مسح",
+		"refresh": "تحديث",
+		"show": "عرض",
+		"undo": "تراجع",
+		"import": "استيراد",
+		"clone": "استنساخ"
+	},
+	"notifications": {
+		"success": "نجاح",
+		"error": "خطأ (كود الحالة: {{statusCode}})",
+		"undoable": "لديك {{seconds}} ثوانٍ للتراجع",
+		"createSuccess": "تم إنشاء {{resource}} بنجاح",
+		"createError": "كانت هناك مشكلة في إنشاء {{resource}} (كود الحالة: {{statusCode}})",
+		"deleteSuccess": "تم حذف {{resource}} بنجاح",
+		"deleteError": "خطأ عند حذف {{resource}} (كود الحالة: {{statusCode}})",
+		"editSuccess": "تم تعديل {{resource}} بنجاح",
+		"editError": "خطأ أثناء تعديل {{resource}} (كود الحالة: {{statusCode}})",
+		"importProgress": "الاستيراد: {{processed}}/{{total}}",
+		"warnWhenUnsavedChanges": "هل أنت متأكد أنك تريد المغادرة؟ لديك تغييرات غير محفوظة."
+	},
+	"errors": {
+		"field_is_required": "{{field}} مطلوب"
+	}
+}

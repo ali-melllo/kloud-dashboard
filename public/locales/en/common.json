@@ -1,0 +1,606 @@
+{
+    "pages": {
+        "login": {
+            "title": "Sign in to your account",
+            "subtitle": "Provide Username and password to sign in",
+            "signup": "Sign up",
+            "fields": {
+                "username": "Username",
+                "email": "Email",
+                "password": "Password"
+            },
+            "errors": {
+                "validEmail": "Invalid email address"
+            },
+            "buttons": {
+                "submit": "Sign in"
+            }
+        },
+        "signup": {
+            "title": "Create Your New account",
+            "subtitle": "Welcome To Kloud",
+            "signin": "Sign in",
+            "buttons": {
+                "submit": "Sign Up"
+            },
+            "fields": {
+                "username": "Username",
+                "email": "Email",
+                "password": "Password"
+            }
+        },
+        "home": {
+            "home": "Home"
+        },
+        "billing": {
+            "billing": "Billing"
+        },
+        "profile": {
+            "profileInfo": "Profile Info",
+            "update": "Update Profile",
+            "fields": {
+                "name": "Name",
+                "email": "Email",
+                "nationalcode": "National Code",
+                "cash": "Cash",
+                "company": "Company",
+                "tell": "Telephone",
+                "mobile": "Mobile",
+                "post": "Post",
+                "address": "Address",
+                "economicalnumber": "Economical Number"
+            }
+        },
+        "projects": {
+            "title": "Projects",
+            "search": "Search In Projects",
+            "delete": "Delete Project",
+            "create": "Create Project",
+            "select": "Select a Project",
+            "name": "Project Name",
+            "create_cicd": "Create a CI/CD Project",
+            "create_template": "Select From a Template",
+            "descriptions": {
+                "create_template": "Connect a project Using our Ready for deployments Template",
+                "create_cicd": "Connect a project from Your own Repository (Github,Gitlab) Integrate  Your Changes Directly To Deployment",
+                "show_all": "Show All Templates",
+                "select_template": "Select a Template To Start",
+                "connect": "Connect To A Repository"
+            },
+            "form": {
+                "project_name": {
+                    "label": "Project Name",
+                    "placeholder": "Awesome Project"
+                },
+                "project_type": {
+                    "label": "Project Type",
+                    "placeholder": "e.g. golang"
+                },
+                "branch_name": {
+                    "label": "Branch Name",
+                    "placeholder": "e.g. main"
+                },
+                "git_url": {
+                    "label": "Git URL",
+                    "placeholder": "git://"
+                },
+                "dockerfile": {
+                    "label": "Dockerfile",
+                    "placeholder": "e.g. Dockerfile"
+                },
+                "work_directory": {
+                    "label": "Work Directory",
+                    "placeholder": ".yottab/"
+                },
+                "user": {
+                    "label": "Git User",
+                    "placeholder": "MyUser"
+                },
+                "secret": {
+                    "label": "Git Secret",
+                    "placeholder": "ghp0nTHkAflf05xBJcVTzCx6aH8jAYaTQX_eNLSI"
+                }
+            }
+        },
+        "pipelines": {
+            "title": "Pipelines",
+            "labels": {
+                "pipeline_detail": "Pipeline Detail",
+                "pipeline_jobs": "Pipeline Jobs",
+                "stage": "Stage"
+            }
+        },
+        "applications": {
+            "title": "Applications",
+            "new": "Create New Application",
+            "delete": "Delete Application",
+            "pause": "Pause Application",
+            "start": "Start Application",
+            "install": "Install Application",
+            "search": "Search In Applications",
+            "uploadFile": "Upload a File",
+            "newDirectory": "New Directory",
+            "dirName": "Directory Name",
+            "overview": {
+                "fields": {
+                    "cluster_ip": "Cluster IP",
+                    "ports": "Ports",
+                    "services": "Services",
+                    "deployments": "Deployments",
+                    "replicas": "Replicas",
+                    "status": "Status",
+                    "available_replicas": "Available Replicas"
+                }
+            },
+            "system_is_turned_off": "System Is Turned Off",
+            "system_is_turned_off_description": "Your Application is Turned Off at the moment try reinstalling your Application"
+        },
+        "services": {
+            "title": "Services"
+        },
+        "gateways": {
+            "title": "Gateways",
+            "new": "New Gateway",
+            "cicdService": "CI/CD Service",
+            "redirect": "Redirects",
+            "routing": "HTTP routing",
+            "redirectDescription": "Redirects return HTTP 3XX responses to a client, instructing it to retrieve a different resource. Redirects change configured URL components to match the redirect configuration while preserving other components from the original request URL",
+            "routingDescription": "The HTTPRoute resource allows you to match on HTTP traffic and direct it to Kubernetes backends. HTTPRoute matches traffic on host, header, and path fields and forwards it to different Services.",
+            "routingExampleDescription": "The following example describes a required traffic flow across three different Services:",
+            "form": {
+                "hostname": {
+                    "label": "Hostname",
+                    "placeholder": "Type to create",
+                    "description": "Hostnames defines a set of hostnames that should match against the HTTP Host header to select a HTTPRoute used to process the request.\nImplementations MUST ignore any port value specified in the HTTP Host header while performing a match and (absent of any applicable header\nmodification configuration) MUST forward this header unmodified to the backend. IPs are not allowed values for Hostnames"
+                },
+                "matches": {
+                    "button": "Add new match",
+                    "match": "Matches",
+                    "description": "Matches define conditions used for matching the rule against incoming HTTP requests. Each match is independent, i.e. \nthis rule will be matched if any one of the matches is satisfied.",
+                    "type": {
+                        "label": "Type"
+                    },
+                    "value": {
+                        "label": "Value",
+                        "placeholder": "e.g. /test_filter"
+                    }
+                },
+                "filters": {
+                    "button": "Add new filter",
+                    "filter": "Filter",
+                    "label": "Filters",
+                    "description": "Filters define the filters that are applied to requests that match this rule. \n  - Req/Res Modifier: defines a schema for a filter that modifies request/response headers.\n  - Set: overwrites the request with the given header (name, value) before the action.\n  - Add: adds the given header(s) (name, value) to the request before the action. It appends to any existing values associated with the header name.\n  - Remove: the given header(s) from the HTTP request before the action. The value of Remove is a list of HTTP header names. Note that the header names are case-insensitive",
+                    "type": {
+                        "label": "Type",
+                        "RequestHeaderModifier": {
+                            "label": "Req Modifier"
+                        },
+                        "ResponseHeaderModifier": {
+                            "label": "Res Modifier"
+                        },
+                        "RequestRedirect": {
+                            "label": "Request Redirect"
+                        }
+                    },
+                    "action": {
+                        "label": "Action"
+                    },
+                    "name": {
+                        "label": "Name",
+                        "placeholder": "e.g. AppVersion"
+                    },
+                    "value": {
+                        "label": "Value",
+                        "placeholder": "e.g. v0.0.1"
+                    }
+                },
+                "backends": {
+                    "button": "Add new backend",
+                    "label": "Backend Refs",
+                    "description": "**BackendRefs** defines the backend(s) where matching requests should be sent. Examples include an S3 bucket, a Ci/CD Application, etc.",
+                    "name": {
+                        "label": "Name"
+                    },
+                    "port": {
+                        "label": "Port",
+                        "placeholder": "Port"
+                    },
+                    "wight": {
+                        "label": "Weight",
+                        "placeholder": "Weight"
+                    }
+                }
+            }
+        },
+        "terminal": {
+            "fields": {
+                "containers": "Containers",
+                "node_name": "Node name",
+                "restart_policy": "RestartPolicy",
+                "logs": "Logs",
+                "files": "Files",
+                "terminal": "Terminal"
+            }
+        },
+        "volume": {
+            "create":"Create Volume",
+            "fields":{
+                "mount_path":"Mount Path",
+                "name":"Name",
+                "plan":"Plan",
+                "application":"Application"
+            },
+            "table":{
+                "name":"Name",
+                "mount_path":"Mount Path",
+                "status":"Status",
+                "plan":"Plan",
+                "class":"Class",
+                "resource":"Resource",
+                "create":"Create"
+            }
+        },
+        "configmap": {
+            "tab_label": "Configmaps",
+            "edit_title": "Edit Configmap",
+            "title": {
+                "main": "Configmaps",
+                "new": "Create New Configmap",
+                "list": "Configmap List",
+                "edit": "Edit Configmap {{configmap}}"
+            },
+            "button": {
+                "new": "New configmap"
+            },
+            "form": {
+                "key": {
+                    "label": "Key",
+                    "placeholder": "e. g. API_KEY"
+                },
+                "value": {
+                    "label": "Label",
+                    "placeholder": ""
+                }
+            }
+        },
+        "jobs": {},
+        "branch": {
+            "create_button": "Create new branch",
+            "new_title": "Create New Branch",
+            "form": {
+                "name": {
+                    "label": "Branch Name",
+                    "placeholder": "e.g. dev"
+                },
+                "is_development": {
+                    "label": "Development",
+                    "placeholder": ""
+                },
+                "disable": {
+                    "label": "Disable",
+                    "placeholder": ""
+                }
+            }
+        }
+    },
+    "user": {
+        "update": "Update Profile"
+    },
+    "tickets": {
+        "new": "New Ticket",
+        "create": "Create New Ticket",
+        "topics": "Topics",
+        "choose": "Choose a Ticket",
+        "sendMessage": "Send Message",
+        "fields": {
+            "message": "Message",
+            "title": "Title",
+            "category": "Category"
+        },
+        "notifications": {
+            "ticketsent": "Your Ticket Is Sent"
+        }
+    },
+    "namespace": {
+        "create": "Create Namespace",
+        "search": "Search in Namespaces",
+        "name": "Namespace",
+        "req_datacenter": "Request Data center"
+    },
+    "labels": {
+        "created_by": "Created by",
+        "created_at": "Created",
+        "duration": "Duration",
+        "status": "Status",
+        "branch": "Branch",
+        "commit": "Commit",
+        "id": "ID"
+    },
+    "table": {
+        "no_results": "No results.",
+        "filter": {
+            "placeholder": "Type to filter...",
+            "reset": "Reset"
+        },
+        "sort": {
+            "asc": "Asc",
+            "desc": "Desc"
+        },
+        "visibility": {
+            "hide": "Hide",
+            "show": "Show",
+            "view": "View"
+        },
+        "pagination": {
+            "next": "Next",
+            "previous": "Previous",
+            "per_page": "Rows per page",
+            "selection": "{{selected}} of {{total}} row(s) selected"
+        }
+    },
+    "actions": {
+        "list": "List",
+        "new": "Create",
+        "edit": "Edit",
+        "show": "Show"
+    },
+    "buttons": {
+        "create": "Create",
+        "add": "Add",
+        "save": "Save",
+        "previous": "Previous",
+        "update":"Update",
+        "next": "Next",
+        "logout": "Logout",
+        "delete": "Delete",
+        "edit": "Edit",
+        "cancel": "Cancel",
+        "confirm": "Are you sure?",
+        "filter": "Filter",
+        "clear": "Clear",
+        "refresh": "Refresh",
+        "download": "Download",
+        "show": "Show",
+        "undo": "Undo",
+        "import": "Import",
+        "clone": "Clone"
+    },
+    "notifications": {
+        "success": "Successful",
+        "unauthorized": "Unauthorized Access",
+        "error": "Error (status code: {{statusCode}})",
+        "undoable": "You have {{seconds}} seconds to undo",
+        "createSuccess": "Successfully created {{resource}}",
+        "createError": "There was an error creating {{resource}} (status code: {{statusCode}})",
+        "deleteSuccess": "Successfully deleted {{resource}}",
+        "deleteError": "Error when deleting {{resource}} (status code: {{statusCode}})",
+        "editSuccess": "Successfully edited {{resource}}",
+        "editError": "Error when editing {{resource}} (status code: {{statusCode}})",
+        "importProgress": "Importing: {{processed}}/{{total}}",
+        "warnWhenUnsavedChanges": "Are you sure you want to leave? You have unsaved changes.",
+        "appStarted": "Your Application Is started",
+        "appStopped": "Your Application Is Turned off Now"
+    },
+    "errors": {
+        "field_is_required": "{{field}} is required",
+        "field_must_match_exact": "{{field}} must match exact"
+    },
+    "navbar": {
+        "general": "General",
+        "namespace": "Namespace",
+        "settings": "Settings",
+        "setting": "Settings",
+        "overview": "Overview",
+        "gateways": "Gateways",
+        "project": "Projects",
+        "profile": "Profile",
+        "tickets": "Tickets",
+        "logout": "Logout",
+        "container": "Containers",
+        "files": "Files",
+        "logs": "Logs",
+        "terminal": "Terminal",
+        "envoirments": "Environments",
+        "list": "General",
+        "build_env": "Build_env",
+        "installation": "Installation",
+        "pipeline": "Pipeline",
+        "kubectl": "Kubernetes Config",
+        "volume": "Volume"
+    },
+    "descriptions": {
+        "deleteProject": "The project will be permanently deleted, including its deployments and domains. This action is irreversible and can not be undone.",
+        "stopApplication": "The project will be permanently be Stopped, including its deployments and domains This action is reversible and You can Install The Project Again",
+        "deleteApplication": "The project will be permanently deleted, including its deployments and domains This action is irreversible and can not be undone",
+        "uploadFile": "Select file of your choice for addition to the specific directory.",
+        "newDirectory": "Create a New Directory (mkdir)",
+        "kubectl": "Download Your Kube Ctl Config in selected Namespace"
+    },
+    "landing": {
+        "mainHero": {
+            "title": "Let’s build from here",
+            "description": "using Git repositories as the source of truth for defining the desired application state.",
+            "signUpTitle": "Sign Up for Kloud",
+            "trialTitle": "Start a Free enterprise Trial"
+        },
+        "multiline":{
+            "title":"22% increase",
+            "description":"in developer productivity after three years with GitHub",
+            "badge":"Did you know?"
+        },
+        "line":{
+            "title":"Empower developers",
+            "description":"With GitHub, you can secure code in minutes.",
+            "badge":"Application security"
+        },
+        "footerHero": { 
+            "title": "Don't Build the Platform, Launch Your App",
+            "description": "Our PaaS service provides everything you need to develop, deploy, and manage your applications, servers, storage, databases, and more all-in-one place. Kloud.team offers a virtualized infrastructure (servers, storage, networking) that you can access and scale up or down as needed, just like turning on a light switch.",
+            "signUpTitle": "Sign Up for Kloud",
+            "trialTitle": "Start a Free enterprise Trial"
+        },
+        "lineCardPaaS": {
+            "badge": "Productivity",
+            "title": "Accelerate innovation",
+            "description": "Centrally configured environments so your teammates can start burstable machine resources in minutes without setup."
+        },
+        "stickyDevOps": {
+            "item": {
+                "title": "Kloud  is a way of implementing Continuous Deployment for cloud native applications.",
+                "description": "The core idea of Kloud.Team  is having a Git repository that contains declarative descriptions of the application",
+                "descriptionList": {
+                    "0": "the entire process of building and running it in the target environment is automated. Using 'Preview Environments,' this service can replicate and re-run all your services in isolated environments, with no limit on the number of copies."
+                }
+            },
+            "list": {
+                "0": {
+                    "title": "Cloud-native Continuous Deployment",
+                    "description": "Kloud Ci/CD is really for a wide range of people who build software today: from software engineer to team manager, from product owner to site reliability engineer."
+                },
+                "1": {
+                    "title": "Automated CI/CD with Git Integration",
+                    "description": "We’ve integrated a powerful CI/CD system that automatically triggers whenever a customer’s Git repository is updated. Upon every commit, the latest version of the Git repository is fetched and built using a streamlined process that ensures consistency and reliability."
+                },
+                "2": {
+                    "title": "Build Automation with Kaniko",
+                    "description": "Our system uses Kaniko to build container images directly from Dockerfiles and other Git repository files. This allows for a fully automated and secure image-building process, ensuring that each update is quickly reflected in your application."
+                },
+                "4": {
+                    "title": "Pipeline Visualization in the Dashboard",
+                    "description": "Users can monitor the entire build process through an intuitive pipeline visualization in the Kloud.Team dashboard. Each step of the CI pipeline is displayed, offering clear insights into the progress and any issues that arise during the build."
+                },
+                "5": {
+                    "title": "Error Detection and Continuous Rebuilds",
+                    "description": "If there is an error in the build process, users are notified immediately via the dashboard. They can make the necessary updates to their Git repository and trigger the build process again, ensuring fast iteration and continuous improvement."
+                },
+                "6": {
+                    "title": "Secure Continuous Deployment (CD)",
+                    "description": "For deployment, we ensure a secure and automated replacement of the previous version of your application on Kubernetes. This guarantees smooth rollouts and minimizes the risk of downtime during updates."
+                },
+                "7": {
+                    "title": "Customizable Environment Variables",
+                    "description": "Users can modify the environment variables for their builds and re-run the CI pipeline with the updated environment settings. This flexibility allows users to test different configurations or environments without altering the main pipeline setup."
+                },
+                "8": {
+                    "title": "Direct Access to Logs and Pod Terminals",
+                    "description": "Once the application is deployed, users can access real-time logs and interact with the terminal of their pods directly from the Kloud.Team dashboard. This provides a hands-on approach for monitoring and debugging in real time."
+                },
+                "9": {
+                    "title": "Preconfigured Service Deployment",
+                    "description": "We provide a collection of preconfigured services, allowing users to quickly deploy essential applications like databases and other infrastructure components. During installation, users can customize the deployment by setting the necessary parameters and configurations."
+                }
+            }
+        },
+        "stickyPaaS": {
+            "item": {
+                "title": "Kloud is a way of implementing GitOps",
+                "description": "With development environments that closely replicate production, you can eliminate lengthy debugging cycles caused by inconsistencies between environments.",
+                "descriptionList": {
+                    "0": "Let's say your team is currently working on introducing a new feature. You're almost finished implementing this feature, but you want to try it out in a production-like environment."
+                }
+            },
+            "list": {
+                "0": {
+                    "title": "Every product team can safely ship updates many times a day",
+                    "description": "When we say “high velocity” we mean that every product team can safely ship updates many times a day — deploy instantly, observe the results in real time, and use this feedback to roll forward or back."
+                },
+                "1": {
+                    "title": "Team Environments",
+                    "description": "Each team member is given a ready-to-use but short-living production-like deployment to gather feedback early. Also, it is crucial for you to get feedback from someone in the UX and QA team before the feature goes into production."
+                },
+                "2": {
+                    "title": "Choose cost effectively",
+                    "description": "We offer the flexibility to choose from multiple data centers, each with its own pricing options. Whether you need a cost-effective solution for staging services or a reliable and stable environment for your production services, we have you covered. "
+                },
+                "3": {
+                    "title": "Isolated Namespaces for Every Branch",
+                    "description": "We provide the ability for users to create isolated Kubernetes namespaces where different branches of their software can be deployed. Each namespace acts as a self-contained environment, ensuring no interference between branches while maintaining consistent service connections."
+                },
+                "4": {
+                    "title": "One-Click Namespace Creation",
+                    "description": "With just a single click, users can automatically create new namespaces in Kubernetes. These namespaces will contain all the necessary prerequisites for the service, such as databases and dependent microservices, tailored to the new branch being deployed."
+                },
+                "5": {
+                    "title": "Automated Service Provisioning",
+                    "description": "When a new namespace is created, all services—whether they are microservices from different repositories or databases—are automatically set up within the namespace. These services are configured to work seamlessly with each other, just like in the previous namespace, ensuring consistency across environments."
+                },
+                "6": {
+                    "title": "Branch-Specific Deployments",
+                    "description": "Users can easily deploy different branches of their software to each namespace. Our platform ensures that the correct branch from each repository is pulled, built, and deployed within the namespace, enabling users to test their features in isolation."
+                },
+                "7": {
+                    "title": "Reusable Service Layout",
+                    "description": "Users only need to configure their service architecture once. This includes setting up multiple microservices from different repositories and databases in a single namespace. After that, every time a new namespace is created, these configurations are automatically applied, with services deployed from the appropriate branches."
+                },
+                "8": {
+                    "title": "Database Isolation and Duplication",
+                    "description": "Each namespace will have its own isolated databases, providing a clean state for testing without interfering with other environments. These databases are set up automatically when a new namespace is created, ensuring that each branch has a fresh, isolated environment to work with."
+                },
+                "9": {
+                    "title": "Consistent Service Connectivity",
+                    "description": "All microservices, databases, and dependencies are connected within each namespace exactly as in the original configuration, ensuring that each new namespace operates identically to the original, but with code pulled from the new branch."
+                },
+                "10": {
+                    "title": "Unlimited Environments",
+                    "description": "Our platform allows users to create an unlimited number of preview environments (namespaces), enabling rapid testing and iteration without constraints. Each environment is fully isolated, allowing for scalable testing across multiple branches and features."
+                }
+            }
+        },
+        "stickyGatewayAPI": {
+            "item": {
+                "title": "Gateway API",
+                "description": "Simplify and automate the discovery, routing, and load balancing of microservices.",
+                "descriptionList": {
+                    "0": "Kloud is a leading modern reverse proxy and ingress controller that makes deploying services and APIs easy.",
+                    "1": "Unlike a traditional reverse proxy, which requires manual configuration, Gateway API uses service discovery to dynamically configure routing."
+                }
+            },
+            "list": {
+                "0": {
+                    "title": "Native Gateway API",
+                    "description": "A powerful and extensible API that integrates seamlessly with your Kubernetes cluster, enabling easy management of traffic routing, load balancing, and ingress configurations."
+                },
+                "1": {
+                    "title": "Advanced Traffic Routing",
+                    "description": "Effortlessly define and manage complex traffic routing rules, allowing you to direct traffic based on path, hostname, or even custom headers for a truly granular control over your services."
+                },
+                "2": {
+                    "title": "Custom Headers Injection",
+                    "description": "Easily add custom headers to incoming requests, enabling greater flexibility for authentication, tracing, and routing logic. This feature allows you to enrich your API requests with dynamic metadata."
+                },
+                "3": {
+                    "title": "Scalable Load Balancing",
+                    "description": "Distribute traffic across your services using robust and scalable load-balancing techniques, ensuring high availability and fault tolerance for your applications, regardless of traffic spikes."
+                },
+                "4": {
+                    "title": "Canary and Blue-Green Deployments",
+                    "description": "Seamlessly test new features and updates using Canary or Blue-Green deployments, allowing you to gradually roll out changes or run parallel versions of your service to ensure stability before full-scale release."
+                },
+                "5": {
+                    "title": "Microservices Architecture Support",
+                    "description": "Accelerate the development of micro-services architectures by providing a robust traffic management layer, enabling services to communicate efficiently while maintaining security and scalability across multiple environments."
+                },
+                "6": {
+                    "title": "Enhanced Security with TLS",
+                    "description": "Out-of-the-box support for managing TLS certificates and terminating SSL/TLS connections at the gateway, offering a secure and encrypted pathway for client-to-service communication."
+                },
+                "7": {
+                    "title": "Multi-Tenant Ready",
+                    "description": "Support for multi-tenant environments, allowing you to manage multiple domains, projects, or services from a single gateway instance, ideal for complex, large-scale applications."
+                },
+                "8": {
+                    "title": "Custom Policy Integration",
+                    "description": "Define and apply custom policies like rate limiting, authentication, or request throttling at the gateway level to enhance security and control over your API traffic."
+                },
+                "9": {
+                    "title": "Declarative Configuration",
+                    "description": "Manage your gateway and routing configurations using declarative Setting panel, leveraging the full power of GitOps to version, review, and automate deployments."
+                },
+                "10": {
+                    "title": "Preview and Rollback Changes",
+                    "description": "Easily preview your configuration changes in isolated environments before rolling them out to production, with the ability to quickly rollback in case of errors."
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,117 @@
+.blurEffect {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.317);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+  }
+
+  .glow{
+    box-shadow: rgba(140, 54, 202, 0.8) 0 0 110px 33px;
+}
+
+.glow-green{
+  box-shadow: rgba(74, 202, 54, 0.671) 0 0 110px 33px;
+}
+
+.glow-cyan{
+  box-shadow: #34c2d1ab 0 0 110px 33px;
+}
+
+
+ 
+.smooth-appear{
+  display: hidden;
+  opacity:0;
+  animation: smooth-appear 0.5s ease forwards;
+}
+
+@keyframes smooth-appear {
+  to{
+    opacity:1;
+    display: block;
+  }
+}
+
+.grow-down {
+  opacity: 0;
+  transform: translateY(-100%);
+  animation: grow-down 1s ease forwards;
+}
+
+@keyframes grow-down {
+  0% {
+    opacity: 0; /* invisible while outside */
+    transform: translateY(-100%); /* move from outside */
+  }
+  30% {
+    opacity: 0; /* still invisible near the top */
+    transform: translateY(-20%); /* entering into view */
+  }
+  60% {
+    opacity: 1; /* gradually becoming visible */
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1; /* fully visible when inside */
+    transform: translateY(0); /* fully in view */
+  }
+}
+
+#heroImage{
+  padding-left: 5px;
+}  
+
+.appear-left{
+  display: hidden;
+  opacity:0;
+  animation: appear-left 1s ease forwards;
+  transform: translateX(-100%);
+}
+
+@keyframes appear-left {
+  to{
+    opacity:1;
+    display: block;
+    transform: translateX(0);
+  }
+}
+
+.appear-right{
+  display: hidden;
+  opacity:0;
+  animation: appear-right 1s ease forwards;
+  transform: translateX(100%);
+}
+
+@keyframes appear-right {
+  to{
+    opacity:1;
+    display: block;
+    transform: translateX(0);
+  }
+}
+
+
+.container-landing {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 1184px) {
+  .container-landing {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  #heroImage{
+    padding-left: 250px;
+  } 
+}
+
+@media (min-width: 1540px) {
+  .container-landing {
+    padding-left: 17vw;
+    padding-right: 17vw;
+  }
+  #heroImage{
+    padding-left: 0;
+  } 
+}
